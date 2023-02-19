@@ -65,8 +65,8 @@ configure(subprojects - project(":common")) {
     benchmark {
         configurations {
             named("main") {
-                warmups = 3 // number of warmup iterations
-                iterations = 5 // number of iterations
+                warmups = 5 // number of warmup iterations
+                iterations = 3 // number of iterations
                 iterationTime = 3 // time in seconds per iteration
             }
         }
