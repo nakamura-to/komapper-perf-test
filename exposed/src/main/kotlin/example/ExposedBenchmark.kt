@@ -24,7 +24,7 @@ class ExposedBenchmark {
     @Benchmark
     fun insert_sql() {
         transaction {
-            Authors.insert { 
+            Authors.insert {
                 it[name] = "a"
             }
         }

@@ -19,3 +19,4 @@ rootProject.name = "komapper-perf-test"
 include("common")
 include("exposed")
 include("komapper")
+include("ktorm")

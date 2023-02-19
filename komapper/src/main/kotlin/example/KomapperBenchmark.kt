@@ -24,7 +24,7 @@ class KomapperBenchmark {
     @Benchmark
     fun insert_sql() {
         db.withTransaction {
-            val query = QueryDsl.insert(Meta.author).values { 
+            val query = QueryDsl.insert(Meta.author).values {
                 Meta.author.name eq "a"
             }
             db.runQuery(query)
@@ -38,5 +38,4 @@ class KomapperBenchmark {
             db.runQuery(query)
         }
     }
-
 }
