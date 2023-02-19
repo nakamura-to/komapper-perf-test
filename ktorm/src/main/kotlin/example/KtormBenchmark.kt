@@ -2,6 +2,7 @@ package example
 
 import org.ktorm.database.Database
 import org.ktorm.dsl.insert
+import org.ktorm.dsl.insertAndGenerateKey
 import org.ktorm.entity.add
 import org.ktorm.entity.sequenceOf
 import org.openjdk.jmh.annotations.Benchmark
@@ -31,7 +32,7 @@ class KtormBenchmark {
     @Benchmark
     fun insert_sql() {
         db.useTransaction {
-            db.insert(Authors) {
+            db.insertAndGenerateKey(Authors) {
                 set(it.name, "a")
             }
         }
